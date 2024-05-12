@@ -5,7 +5,7 @@ $kunci = array(
 foreach($kunci as $kunci){
 mkdir($kunci);	
 $newfile = fopen($kunci."/index.html", "w");
-$direktori_file = "draf.html";
+$direktori_file = "dir.html";
 $isi_file=file_get_contents($direktori_file);
 $isi_file=str_replace("{keyword}", $kunci,$isi_file);
  fwrite($newfile, $isi_file);
